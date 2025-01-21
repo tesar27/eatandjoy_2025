@@ -14,6 +14,16 @@ final authApiProvider = Provider<AuthApi>((ref) {
   return AuthApi(account, databases);
 });
 
+final isAuthenticatedProvider = FutureProvider<bool>((ref) async {
+  final authApi = ref.watch(authApiProvider);
+  try {
+    final user = await authApi.getCurrentAccount();
+    return user.email.isNotEmpty;
+  } catch (e) {
+    return false;
+  }
+});
+
 class EmailTokenResponse {
   final String userId;
   final Token token;

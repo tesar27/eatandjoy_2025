@@ -43,7 +43,7 @@ class MyApp extends ConsumerWidget {
             settingsState.isDarkMode ? Brightness.dark : Brightness.light,
       ),
 
-      initialRoute: LoginScreen.routeName,
+      // initialRoute: LoginScreen.routeName,
       // Define the route generation function.
       onGenerateRoute: (RouteSettings routeSettings) =>
           generateRoute(routeSettings),
