@@ -1,0 +1,42 @@
+name: enj
+description: "A new Flutter project."
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  appwrite: ^13.1.1
+  envied: ^1.0.0
+  flutter:
+    sdk: flutter
+  flutter_dotenv: ^5.2.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^1.0.0
+  http: ^1.2.2
+  shared_preferences: ^2.3.4
+  uuid: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.13
+  envied_generator: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
+    - .env
